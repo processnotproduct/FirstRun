@@ -7,5 +7,11 @@
     <string name="title_section3">Section 3</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="page3_body">You can share your location and update others about your safety.</string>
+    <string name="page3_title">Share what\'s important!</string>
+    <string name="page2_title">We\'ve got you covered!</string>
+    <string name="page2_body">Chaotic Earth keeps track of many different weather conditions and natural disasters.</string>
+    <string name="page1_title">CHAOTIC EARTH</string>
+    <string name="page1_body">Notifying you when your family members, friends, or place of value becomes in danger from natural disasters.</string>
 
 </resources>

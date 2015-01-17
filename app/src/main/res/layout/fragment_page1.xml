@@ -30,10 +30,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CHAOTIC EARTH"
+            android:text="@string/page1_title"
             android:id="@+id/textView"
             android:textColor="#ff212121"
-            android:textSize="42sp"
+            android:textSize="42dp"
             android:layout_marginBottom="200dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -42,13 +42,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notifying you when your family members, friends, or place of value becomes in danger from natural disasters."
+            android:text="@string/page1_body"
             android:id="@+id/textView2"
             android:layout_alignTop="@+id/textView"
             android:layout_marginTop="60dp"
-            android:textSize="26sp"
+            android:textSize="26dp"
             android:layout_alignParentStart="true"
-            android:typeface="sans"
             android:textColor="#ff212121" />
     </RelativeLayout>
 
