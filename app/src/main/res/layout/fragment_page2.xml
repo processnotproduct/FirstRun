@@ -1,54 +1,204 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity$PlaceholderFragment"
-                android:background="#ffffca28">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment"
+    android:background="#ffFFD54F">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+        android:gravity="center" >
 
-        <ImageView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="200dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/disasters_864" />
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#33212121"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#33212121"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#33212121"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#e6fafafa"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#e6fafafa"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="50dp"
+                android:text="@string/crumb_dot"
+                android:textColor="#e6fafafa"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_height="1dp"
+            android:background="#80fafafa"
+            android:layout_width="fill_parent"
+            android:layout_gravity="top" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="28dp"
+            android:text="Skip"
+            android:textColor="#e6fafafa"
+            android:layout_marginLeft="10dp"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="28dp"
+            android:text=">"
+            android:textColor="#e6fafafa"
+            android:gravity="center"
+            android:layout_marginRight="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="28dp"
+            android:text="Done"
+            android:textColor="#bffafafa"
+            android:gravity="center"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/disasters_864"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/page2_title"
-            android:id="@+id/textView"
             android:textColor="#ff212121"
-            android:textSize="30dp"
-            android:layout_marginBottom="175dp"
-            android:textIsSelectable="false"
+            android:textSize="28dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentStart="false"
+            android:textIsSelectable="false"
+            android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/page2_body"
-            android:id="@+id/textView2"
-            android:textSize="26dp"
+            android:textSize="22dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="40dp"
-            android:layout_alignTop="@+id/textView"
-            android:textColor="#ff212121" />
-    </RelativeLayout>
+            android:textColor="#ff212121"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
 
 </RelativeLayout>

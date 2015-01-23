@@ -92,6 +92,10 @@ public class MainActivity extends ActionBarActivity {
 					return PlaceholderFragment.newInstance(R.layout.fragment_page2);
 				case 2:
 					return PlaceholderFragment.newInstance(R.layout.fragment_page3);
+                case 3:
+                    return PlaceholderFragment.newInstance(R.layout.fragment_page4);
+                case 4:
+                    return PlaceholderFragment.newInstance(R.layout.fragment_page5);
 			}
 			return null ;
 
@@ -101,8 +105,8 @@ public class MainActivity extends ActionBarActivity {
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 3;
+			// Show 5 total pages.
+			return 5;
 		}
 
 		@Override
@@ -115,6 +119,10 @@ public class MainActivity extends ActionBarActivity {
 					return getString(R.string.title_section2).toUpperCase(l);
 				case 2:
 					return getString(R.string.title_section3).toUpperCase(l);
+                case 3:
+                    return getString(R.string.title_section4).toUpperCase(l);
+                case 4:
+                    return getString(R.string.title_section5).toUpperCase(l);
 			}
 			return null;
 		}
