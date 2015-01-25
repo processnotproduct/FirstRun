@@ -42,27 +42,30 @@
             android:layout_gravity="center"
             >
             <TextView
+                android:id="@+id/dot_1"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
-                android:textColor="#bffafafa"
+                android:textColor="@color/dot_enabled"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp" />
             <TextView
+                android:id="@+id/dot_2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
-                android:textColor="#bffafafa"
+                android:textColor="@color/dot_disabled"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp" />
             <TextView
+                android:id="@+id/dot_3"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
-                android:textColor="#bffafafa"
+                android:textColor="@color/dot_disabled"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp" />
             </LinearLayout>

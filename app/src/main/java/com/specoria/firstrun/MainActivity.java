@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -33,6 +34,10 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	ViewPager mViewPager;
 
+	private TextView dot3TextView;
+	private TextView dot2TextView;
+	private TextView dot1TextView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,6 +52,45 @@ public class MainActivity extends ActionBarActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
+		final int disabled = getResources().getColor(R.color.dot_disabled);
+		final int enabled = getResources().getColor(R.color.dot_enabled);
+
+		dot1TextView = (TextView) findViewById(R.id.dot_1);
+		dot2TextView = (TextView) findViewById(R.id.dot_2);
+		dot3TextView = (TextView) findViewById(R.id.dot_3);
+
+		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+			@Override
+			public void onPageScrolled(int i, float v, int i2) {
+
+			}
+
+			@Override
+			public void onPageSelected(int page) {
+				dot1TextView.setTextColor(disabled);
+				dot2TextView.setTextColor(disabled);
+				dot3TextView.setTextColor(disabled);
+				switch(page) {
+					case 0:
+						dot1TextView.setTextColor(enabled);
+						break ;
+					case 1:
+						dot2TextView.setTextColor(enabled);
+						break ;
+					case 2:
+					case 3:
+					case 4:
+						dot3TextView.setTextColor(enabled);
+						break ;
+				}
+
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int i) {
+
+			}
+		});
 	}
 
 
@@ -85,6 +129,7 @@ public class MainActivity extends ActionBarActivity {
 
 		@Override
 		public Fragment getItem(int position) {
+
 			switch(position) {
 				case 0:
 					return PlaceholderFragment.newInstance(R.layout.fragment_page1);
