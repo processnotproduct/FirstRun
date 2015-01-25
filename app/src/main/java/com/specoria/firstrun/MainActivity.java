@@ -13,8 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import static android.view.View.INVISIBLE;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -28,15 +30,15 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
-
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
 
+    private TextView dot1TextView;
+    private TextView dot2TextView;
 	private TextView dot3TextView;
-	private TextView dot2TextView;
-	private TextView dot1TextView;
+    private FrameLayout pageIndicator;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +46,15 @@ public class MainActivity extends ActionBarActivity {
 
 		setContentView(R.layout.activity_main);
 
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the activity.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+       /**
+		*Create the adapter that will return a fragment for each of the three
+		*primary sections of the activity.
+		*/
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-		// Set up the ViewPager with the sections adapter.
+       /**
+		* Set up the ViewPager with the sections adapter.
+        */
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -58,6 +64,7 @@ public class MainActivity extends ActionBarActivity {
 		dot1TextView = (TextView) findViewById(R.id.dot_1);
 		dot2TextView = (TextView) findViewById(R.id.dot_2);
 		dot3TextView = (TextView) findViewById(R.id.dot_3);
+        pageIndicator = (FrameLayout) findViewById(R.id.pageIndicator);
 
 		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 			@Override
@@ -70,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
 				dot1TextView.setTextColor(disabled);
 				dot2TextView.setTextColor(disabled);
 				dot3TextView.setTextColor(disabled);
+                pageIndicator.setVisibility(View.VISIBLE);
 				switch(page) {
 					case 0:
 						dot1TextView.setTextColor(enabled);
@@ -78,9 +86,13 @@ public class MainActivity extends ActionBarActivity {
 						dot2TextView.setTextColor(enabled);
 						break ;
 					case 2:
+                        dot3TextView.setTextColor(enabled);
+                        break ;
 					case 3:
+                        pageIndicator.setVisibility(INVISIBLE);
+                        break ;
 					case 4:
-						dot3TextView.setTextColor(enabled);
+                        pageIndicator.setVisibility(INVISIBLE);
 						break ;
 				}
 
@@ -116,7 +128,6 @@ public class MainActivity extends ActionBarActivity {
 //		return super.onOptionsItemSelected(item);
 //	}
 
-
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
@@ -144,33 +155,37 @@ public class MainActivity extends ActionBarActivity {
 			}
 			return null ;
 
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a PlaceholderFragment (defined as a static inner class below).
+		   /**
+            * getItem is called to instantiate the fragment for the given page.
+			* Return a PlaceholderFragment (defined as a static inner class below).
+            */
 		}
 
 		@Override
 		public int getCount() {
-			// Show 5 total pages.
+            /**
+             * Show 5 total pages.
+             */
 			return 5;
 		}
 
-		@Override
-		public CharSequence getPageTitle(int position) {
-			Locale l = Locale.getDefault();
-			switch (position) {
-				case 0:
-					return getString(R.string.title_section1).toUpperCase(l);
-				case 1:
-					return getString(R.string.title_section2).toUpperCase(l);
-				case 2:
-					return getString(R.string.title_section3).toUpperCase(l);
-                case 3:
-                    return getString(R.string.title_section4).toUpperCase(l);
-                case 4:
-                    return getString(R.string.title_section5).toUpperCase(l);
-			}
-			return null;
-		}
+//		@Override
+//		public CharSequence getPageTitle(int position) {
+//			Locale l = Locale.getDefault();
+//			switch (position) {
+//				case 0:
+//					return getString(R.string.title_section1).toUpperCase(l);
+//				case 1:
+//					return getString(R.string.title_section2).toUpperCase(l);
+//				case 2:
+//					return getString(R.string.title_section3).toUpperCase(l);
+//                case 3:
+//                    return getString(R.string.title_section4).toUpperCase(l);
+//                case 4:
+//                    return getString(R.string.title_section5).toUpperCase(l);
+//			}
+//			return null;
+//		}
 	}
 
 	/**
@@ -178,14 +193,12 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	public static class PlaceholderFragment extends Fragment {
 		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
+		 * The fragment argument representing the section number for this fragment.
 		 */
 		private static final String ARG_LAYOUT_ID = "layout_id";
 
 		/**
-		 * Returns a new instance of this fragment for the given section
-		 * number.
+		 * Returns a new instance of this fragment for the given section number.
 		 */
 		public static PlaceholderFragment newInstance(int layoutId) {
 			PlaceholderFragment fragment = new PlaceholderFragment();
@@ -202,8 +215,9 @@ public class MainActivity extends ActionBarActivity {
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 								 Bundle savedInstanceState) {
 			Bundle arguments = getArguments();
-			View rootView = inflater.inflate(arguments.getInt(ARG_LAYOUT_ID), container, false);
-			return rootView;
+			View rootView;
+            rootView = inflater.inflate(arguments.getInt(ARG_LAYOUT_ID), container, false);
+            return rootView;
 		}
 	}
 

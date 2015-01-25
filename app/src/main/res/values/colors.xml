@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dot_disabled">#33212121</color>
+    <color name="dot_disabled">#40fafafa</color>
     <color name="dot_enabled">#e6fafafa</color>
+
+    <!--<visibility name="visible">visible</visibility>-->
+    <!--<visibility name="invisible">invisible</visibility>-->
+
 </resources>

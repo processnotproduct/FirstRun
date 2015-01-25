@@ -14,33 +14,36 @@
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="112px"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
-        >
+        android:layout_marginBottom="16dp"
+        android:id="@+id/pageIndicator">
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_height="1dp"
-                android:background="#CCC"
+                android:background="#80fafafa"
                 android:layout_width="fill_parent"
                 android:layout_gravity="top" />
         </LinearLayout>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="SKIP"
+            android:textSize="22dp"
             android:layout_gravity="left"
-            />
+            android:layout_marginLeft="30dp"
+            android:textColor="#e6fafafa"
+            android:gravity="center" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            >
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
             <TextView
                 android:id="@+id/dot_1"
                 android:layout_width="wrap_content"
@@ -70,12 +73,15 @@
                 android:layout_marginRight="5dp" />
             </LinearLayout>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text=">"
             android:layout_gravity="right"
-            />
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginRight="40dp"
+            android:textColor="#e6fafafa" />
 
     </FrameLayout>
 
