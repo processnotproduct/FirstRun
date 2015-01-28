@@ -17,14 +17,17 @@
     <string name="page2_title">We\'ve got you covered!</string>
     <string name="page2_body">Chaotic Earth keeps track of many different weather conditions and natural disasters.</string>
 
-    <string name="page3_body">You can share your location and update others about your safety.</string>
     <string name="page3_title">Share what\'s important!</string>
+    <string name="page3_body">You can share your location and update others about your safety.</string>
 
-    <string name="page4_body">Using Google and Chaotic Earth together can help you stay connected to what matters.</string>
     <string name="page4_title">A perfect pair …</string>
+    <string name="page4_body">Using Google and Chaotic Earth together can help you stay connected to what matters.</string>
 
+    <string name="page5_title">We love these social networks too!</string>
     <string name="page5_body">The more connections the better you stay in touch.</string>
-    <string name="page5_title">We\'ve got a heart on for these too …</string>
+
+    <string name="skip">SKIP</string>
+    <string name="next">></string>
 
     <string name="crumb_dot">•</string>
 

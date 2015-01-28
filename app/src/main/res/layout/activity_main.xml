@@ -18,6 +18,7 @@
         android:layout_gravity="bottom"
         android:layout_marginBottom="16dp"
         android:id="@+id/pageIndicator">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -32,12 +33,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="SKIP"
+            android:text="@string/skip"
             android:textSize="22dp"
             android:layout_gravity="left"
             android:layout_marginLeft="30dp"
             android:textColor="#e6fafafa"
-            android:gravity="center" />
+            android:id="@+id/skip"
+            android:visibility="invisible"
+            android:gravity="bottom" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +55,8 @@
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_enabled"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:gravity="center" />
             <TextView
                 android:id="@+id/dot_2"
                 android:layout_width="wrap_content"
@@ -61,7 +65,8 @@
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_disabled"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:gravity="center" />
             <TextView
                 android:id="@+id/dot_3"
                 android:layout_width="wrap_content"
@@ -70,18 +75,20 @@
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_disabled"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:gravity="center" />
             </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text=">"
+            android:text="@string/next"
             android:layout_gravity="right"
             android:textSize="30dp"
-            android:gravity="center"
             android:layout_marginRight="40dp"
-            android:textColor="#e6fafafa" />
+            android:textColor="#e6fafafa"
+            android:clickable="false"
+            android:gravity="bottom" />
 
     </FrameLayout>
 

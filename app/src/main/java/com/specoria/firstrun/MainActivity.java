@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
     private TextView dot2TextView;
 	private TextView dot3TextView;
     private FrameLayout pageIndicator;
+    private TextView skipTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,7 @@ public class MainActivity extends ActionBarActivity {
 		dot2TextView = (TextView) findViewById(R.id.dot_2);
 		dot3TextView = (TextView) findViewById(R.id.dot_3);
         pageIndicator = (FrameLayout) findViewById(R.id.pageIndicator);
+        skipTextView = (TextView) findViewById(R.id.skip);
 
 		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 			@Override
@@ -80,17 +82,18 @@ public class MainActivity extends ActionBarActivity {
                 pageIndicator.setVisibility(View.VISIBLE);
 				switch(page) {
 					case 0:
+                        skipTextView.setVisibility(INVISIBLE);
 						dot1TextView.setTextColor(enabled);
 						break ;
 					case 1:
+                        skipTextView.setVisibility(View.VISIBLE);
 						dot2TextView.setTextColor(enabled);
 						break ;
 					case 2:
+                        skipTextView.setVisibility(INVISIBLE);
                         dot3TextView.setTextColor(enabled);
                         break ;
 					case 3:
-                        pageIndicator.setVisibility(INVISIBLE);
-                        break ;
 					case 4:
                         pageIndicator.setVisibility(INVISIBLE);
 						break ;
