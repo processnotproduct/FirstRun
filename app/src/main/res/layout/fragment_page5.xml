@@ -35,7 +35,8 @@
             android:layout_marginBottom="10dp"
             android:textStyle="bold"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            style="@style/textShadowLight" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -46,7 +47,8 @@
             android:layout_alignParentStart="true"
             android:textColor="#ff212121"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            style="@style/textShadowLight" />
 
     </LinearLayout>
 
@@ -59,7 +61,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp">
 
@@ -72,14 +74,13 @@
                 android:gravity="center"
                 android:textIsSelectable="false"
                 android:background="#ff3b5998"
-                android:textColor="#fffafafa"
-                android:password="false" />
+                android:textColor="#fffafafa" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:layout_alignParentBottom="true">
 
             <TextView
@@ -91,8 +92,7 @@
                 android:gravity="center"
                 android:textIsSelectable="false"
                 android:background="#ff4099ff"
-                android:textColor="#fffafafa"
-                android:password="false" />
+                android:textColor="#fffafafa" />
         </LinearLayout>
     </LinearLayout>
 

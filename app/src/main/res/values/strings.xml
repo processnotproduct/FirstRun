@@ -27,7 +27,8 @@
     <string name="page5_body">The more connections the better you stay in touch.</string>
 
     <string name="skip">SKIP</string>
-    <string name="next">></string>
+    <string name="next">NEXT</string>
+    <string name="signin">SIGN IN</string>
 
     <string name="crumb_dot">•</string>
 

@@ -2,19 +2,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    >
+    android:background="#ffaaaaaa">
 
-    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-                                       xmlns:tools="http://schemas.android.com/tools"
-                                       android:id="@+id/pager"
-                                       android:layout_width="match_parent"
-                                       android:layout_height="match_parent"
-                                       tools:context=".MainActivity"/>
-
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"/>
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="16dp"
         android:id="@+id/pageIndicator">
@@ -32,15 +32,16 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:text="@string/skip"
             android:textSize="22dp"
             android:layout_gravity="left"
             android:layout_marginLeft="30dp"
-            android:textColor="#e6fafafa"
+            android:textColor="#bffafafa"
             android:id="@+id/skip"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:gravity="bottom" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
             <TextView
                 android:id="@+id/dot_1"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_enabled"
@@ -60,7 +61,7 @@
             <TextView
                 android:id="@+id/dot_2"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_disabled"
@@ -70,7 +71,7 @@
             <TextView
                 android:id="@+id/dot_3"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:textSize="50dp"
                 android:text="@string/crumb_dot"
                 android:textColor="@color/dot_disabled"
@@ -80,15 +81,15 @@
             </LinearLayout>
 
         <TextView
+            android:id="@+id/nextsignin"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:text="@string/next"
             android:layout_gravity="right"
-            android:textSize="30dp"
-            android:layout_marginRight="40dp"
-            android:textColor="#e6fafafa"
-            android:clickable="false"
-            android:gravity="bottom" />
+            android:textSize="22dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#bffafafa"
+            android:gravity="center|bottom" />
 
     </FrameLayout>
 

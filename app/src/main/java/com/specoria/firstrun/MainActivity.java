@@ -2,6 +2,7 @@ package com.specoria.firstrun;
 
 import java.util.Locale;
 
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -35,11 +36,16 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	ViewPager mViewPager;
 
+    private FrameLayout pageIndicator;
+
     private TextView dot1TextView;
     private TextView dot2TextView;
 	private TextView dot3TextView;
-    private FrameLayout pageIndicator;
     private TextView skipTextView;
+    private TextView nextsigninTextView;
+
+    private String next="NEXT";
+    private String signin="SIGN IN";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +68,13 @@ public class MainActivity extends ActionBarActivity {
 		final int disabled = getResources().getColor(R.color.dot_disabled);
 		final int enabled = getResources().getColor(R.color.dot_enabled);
 
+        pageIndicator = (FrameLayout) findViewById(R.id.pageIndicator);
+
 		dot1TextView = (TextView) findViewById(R.id.dot_1);
 		dot2TextView = (TextView) findViewById(R.id.dot_2);
 		dot3TextView = (TextView) findViewById(R.id.dot_3);
-        pageIndicator = (FrameLayout) findViewById(R.id.pageIndicator);
         skipTextView = (TextView) findViewById(R.id.skip);
+        nextsigninTextView = (TextView) findViewById(R.id.nextsignin);
 
 		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 			@Override
@@ -80,18 +88,23 @@ public class MainActivity extends ActionBarActivity {
 				dot2TextView.setTextColor(disabled);
 				dot3TextView.setTextColor(disabled);
                 pageIndicator.setVisibility(View.VISIBLE);
+                nextsigninTextView.setText(next);
+//                nextsigninTextView.setShadowLayer(2, 1, 1, R.color.text_shadow_dark);
 				switch(page) {
 					case 0:
-                        skipTextView.setVisibility(INVISIBLE);
+                        skipTextView.setVisibility(View.VISIBLE);
 						dot1TextView.setTextColor(enabled);
 						break ;
 					case 1:
                         skipTextView.setVisibility(View.VISIBLE);
 						dot2TextView.setTextColor(enabled);
+                        nextsigninTextView.setTextColor(getResources().getColor(R.color.signin_75));
 						break ;
 					case 2:
                         skipTextView.setVisibility(INVISIBLE);
                         dot3TextView.setTextColor(enabled);
+                        nextsigninTextView.setText(signin);
+                        nextsigninTextView.setTextColor(getResources().getColor(R.color.signin_90));
                         break ;
 					case 3:
 					case 4:

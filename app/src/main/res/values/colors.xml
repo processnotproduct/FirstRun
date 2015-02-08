@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dot_disabled">#40fafafa</color>
-    <color name="dot_enabled">#e6fafafa</color>
+    <color name="signin_75">#bffafafa</color>
+    <color name="signin_90">#e6fafafa</color>
+    <!--<color name="signin_white">#e6fa05b2</color>-->
 
-    <!--<visibility name="visible">visible</visibility>-->
-    <!--<visibility name="invisible">invisible</visibility>-->
+    <color name="dot_disabled">#40fafafa</color>
+    <color name="dot_enabled">#bffafafa</color>
+
+    <color name="text_shadow_dark">#ff424242</color>
+    <color name="text_shadow_medium">#ff757575</color>
+    <color name="text_shadow_light">#ffbcbcbc</color>
 
 </resources>
