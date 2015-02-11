@@ -89,7 +89,6 @@ public class MainActivity extends ActionBarActivity {
 				dot3TextView.setTextColor(disabled);
                 pageIndicator.setVisibility(View.VISIBLE);
                 nextsigninTextView.setText(next);
-//                nextsigninTextView.setShadowLayer(2, 1, 1, R.color.text_shadow_dark);
 				switch(page) {
 					case 0:
                         skipTextView.setVisibility(View.VISIBLE);
